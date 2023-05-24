@@ -1,0 +1,252 @@
+@import '../variables.scss';
+
+.header {
+  position: fixed;
+  background: #fff;
+  left: center;
+  top: 0;
+  z-index: 10;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1920px;
+  padding-right: 50px;
+
+  @media (max-width:1070px) {
+ justify-content: center;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+      display: flex;
+      font-size: 32px;
+      font-weight: 700;
+      @media (max-width:1000px) {
+        margin-left: 60px;
+      }
+    img {
+      margin-right: 15px;
+    }
+
+    p {
+      color: #7b7b7b;
+    }
+  }
+  &__nav {
+    margin: 0 70px;
+    display: flex;
+    justify-content: space-between;
+    transition: 0.5s;
+    @media (max-width:1070px) {
+      // display: none;
+      position: absolute;
+      margin: 0;
+      left: -1100px;
+      top: 0;
+    }
+   ul{
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    @media (max-width:1070px) {
+      font-weight: 300;
+      flex-direction: column;
+      justify-content: start;
+      padding: 120px 60px;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.64);
+    }
+   }
+
+
+   
+ .link__nav{
+  color: $black;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  text-decoration: none;
+  display:inline-block;
+  @media (max-width:1070px) {
+    font-size: 25px;
+    margin-bottom: 50px;
+    color: #fff;
+  }
+}
+
+
+.link__nav::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0px;
+  width: 100%;
+  height: 1px;
+  background: $black;
+  display: block;
+  -webkit-transform-origin: right top;
+  -ms-transform-origin: right top;
+  transform-origin: right top;
+  -webkit-transform: scale(0, 1);
+  -ms-transform: scale(0, 1);
+  transform: scale(0, 1);
+  -webkit-transition: transform 0.4s cubic-bezier(1, 0, 0, 1);
+  transition: transform 0.4s cubic-bezier(1, 0, 0, 1)
+}
+
+.link__nav:hover::before {
+  -webkit-transform-origin: left top;
+  -ms-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  transform: scale(1, 1)
+}
+    ul{
+      display:flex;
+      li{
+        font-size: 15px;
+        margin-right: 50px;
+      }
+      :last-child{
+        margin-right: 0;
+      }
+    }
+    
+  }
+  &__nav{
+    width: 100%;
+  }
+  &__nav.opened{
+    left: 0;
+  }
+  &__icons{
+    display: flex;
+    flex-wrap: nowrap;
+    transition: 0.2s;
+    margin-right: 50px;
+    .cart-icon{
+      position: relative;
+      span{
+        font-size: 14px;
+        color:$black;
+        position: absolute;
+        right: -18px;
+        top: -10px;
+        @media (max-width:1070px) {
+        color: #fff;
+          }
+      }
+    }
+    @media (max-width:1070px) {
+    position: absolute;
+    right: 0;
+    top:40px;
+    }
+    @media (max-width:600px) {
+    }
+
+    a{
+    
+      display: inline-block;
+      height: 18px;
+      width: 18px;
+      margin-right: 20px;
+      transition: 0.8s;
+      &:hover{
+        transform: scale(1.2);
+      }
+      @media (max-width:1070px) {
+        height: 32px;
+        width: 22px;
+        fill: #fff;
+        }
+    }
+    :last-child{
+      margin-right: 0;
+    }
+  }
+}
+
+
+
+
+
+.button-burger{ 
+  position: absolute;
+  left: 50px;
+  top: 25px;
+  z-index: 10;
+  display: none;
+  width: 50px;
+  height: 50px;
+  @media (max-width:1070px) {
+    display: block;
+  }
+  @media (max-width:520px) {
+    left: 25px;
+  }
+  .menu {
+background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    padding: 0;
+  }
+  .opened{
+    background: none;
+    border: none;
+    width: 50px;
+    height: 50px;
+  }
+  
+  .line {
+    
+    fill: none;
+    stroke: rgb(0, 0, 0);
+    stroke-width: 6;
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+      stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .line1 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+  }
+  .line2 {
+    stroke-dasharray: 60 60;
+    stroke-width: 6;
+  }
+  .line3 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+  }
+  .opened .line1 {
+    stroke: rgb(255, 255, 255);
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+  }
+  .opened .line2 {
+    stroke: rgb(255, 255, 255);
+    stroke-dasharray: 1 60;
+    stroke-dashoffset: -30;
+    stroke-width: 6;
+  }
+  .opened .line3 {
+    stroke: rgb(255, 255, 255);
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+  }
+  
+}
