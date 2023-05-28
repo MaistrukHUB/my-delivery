@@ -1,8 +1,4 @@
-@import './header';
-@import './button';
-@import './categories';
-@import './sort';
-@import './product-block';
-@import './sidebar';
-@import './appointment';
-@import './pageProduct';
+@import './header.scss';
+@import './shopsBlock.scss';
+@import './shopItems';
+@import './cart';

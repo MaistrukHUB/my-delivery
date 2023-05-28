@@ -1,5 +1,5 @@
 import React from 'react';
-import { Header, Sidebar } from "../components";
+import Header from "../components/Header";
 
 import { Outlet } from "react-router-dom";
 
@@ -10,7 +10,7 @@ const MainLayout = () => {
 			<div className="container">
 				<div className="content">
 					<Outlet />
-					<Sidebar visible={'visible-shop'} />
+
 				</div>
 			</div>
 		</div >
