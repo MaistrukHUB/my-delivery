@@ -9,7 +9,8 @@ export const fetchShops = createAsyncThunk(
 	'shops/fetchShops',
 	async () => {
 		// const { data } = await axios.get(`https://64493955b88a78a8f0016922.mockapi.io/shops?sortBy=.[0]&order=desc&filter=${''}&search=${''}`)
-		const { data } = await axios.get(`http://localhost:4444/shops`)
+		const { data } = await axios.get(`https://my-delivery-backand.onrender.com
+		/shops`)
 		return data
 	}
 )

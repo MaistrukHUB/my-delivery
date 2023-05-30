@@ -8,7 +8,7 @@ export const fetchShopsItems = createAsyncThunk(
 	'shopsItems/fetchProducts',
 	async () => {
 		// const { selectedCategory, searchValue } = params
-		const { data } = await axios.get(`http://localhost:4444/shopsItems`)
+		const { data } = await axios.get(`https://my-delivery-backand.onrender.com/shopsItems`)
 		return data
 	}
 )
