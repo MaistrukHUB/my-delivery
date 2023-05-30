@@ -23,9 +23,7 @@ const ShoppingCart = () => {
 			cart,
 			inputs
 		}
-
-
-		axios.post('http://localhost:4444/pushCart', newCart)
+		axios.post('https://my-delivery-backand.onrender.com/pushCart', newCart)
 	}
 
 	return (
