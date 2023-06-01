@@ -41,6 +41,10 @@ git clone https://github.com/MaistrukHUB/my-delivery
 npm install
 
 ```
+```bash
+npm start
+
+```
 
 ## Deploy to Render
 You can also deploy this app to Render:
