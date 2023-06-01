@@ -33,7 +33,7 @@ instoll all package
 Clone the repo and install the dependencies.
 
 ```bash
-git clone https://github.com/MaistrukHUB/back-add
+git clone https://github.com/MaistrukHUB/my-delivery
 
 ```
 
