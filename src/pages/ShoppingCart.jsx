@@ -24,6 +24,7 @@ const ShoppingCart = () => {
 			inputs
 		}
 		axios.post('https://my-delivery-backand.onrender.com/pushCart', newCart)
+		alert('cart add')
 	}
 
 	return (
