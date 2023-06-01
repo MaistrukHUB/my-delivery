@@ -11,7 +11,7 @@ const ShoppingCart = () => {
 	const cart = useSelector((state) => state.CartSlice.cart)
 	const totalPrice = useSelector((state) => state.CartSlice.totalPrice)
 
-	const [inputs, setInputs] = React.useState({ name: '', email: '', phone: 0, address: '' });
+	const [inputs, setInputs] = React.useState({ name: '', email: '', phone: '', address: '' });
 
 	const dispatch = useDispatch()
 
