@@ -17,6 +17,9 @@ React has been designed for gradual adoption from the start, and **you can use a
 * [Create a New React App](https://reactjs.org/docs/create-a-new-react-app.html) if you're looking for a powerful JavaScript toolchain.
 
 You can use React as a `<script>` tag from a [CDN](https://reactjs.org/docs/cdn-links.html), or as a `react` package on [npm](https://www.npmjs.com/package/react).
+### `npm install`
+
+install all package
 
 ## Documentation
 
@@ -73,3 +76,4 @@ To help you get your feet wet and get you familiar with our contribution process
 ### License
 
 React is [MIT licensed](./LICENSE).
+https://render.com/
