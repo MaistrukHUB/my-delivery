@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import ItemCart from "../components/ItemCart";
 import { addProduct, clearCart } from "../redux/Slices/CartSlice";
 import axios from "axios";
+import { Link } from 'react-router-dom';
 
 
 
@@ -25,6 +26,8 @@ const ShoppingCart = () => {
 		}
 		axios.post('https://my-delivery-backand.onrender.com/pushCart', newCart)
 		alert('cart add')
+		dispatch(clearCart())
+		setInputs({ ...inputs, name: '', email: '', phone: 0, address: '' })
 	}
 
 	return (
@@ -34,6 +37,7 @@ const ShoppingCart = () => {
 					<div className="form">
 						Name:
 						<input
+							value={inputs.name}
 							onChange={e => setInputs({ ...inputs, name: e.target.value })}
 							type="text"
 							placeholder='name'
@@ -42,6 +46,7 @@ const ShoppingCart = () => {
 					<div className="form">
 						Email:
 						<input
+							value={inputs.email}
 							onChange={e => setInputs({ ...inputs, email: e.target.value })}
 							type="email"
 							placeholder='name'
@@ -50,6 +55,7 @@ const ShoppingCart = () => {
 					<div className="form">
 						Phone:
 						<input
+							value={inputs.phone}
 							onChange={e => setInputs({ ...inputs, phone: e.target.value })}
 							type="phone"
 							placeholder='name'
@@ -58,6 +64,7 @@ const ShoppingCart = () => {
 					<div className="form">
 						Address:
 						<input
+							value={inputs.address}
 							onChange={e => setInputs({ ...inputs, address: e.target.value })}
 							type="text"
 							placeholder='name' />
